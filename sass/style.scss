@@ -1,0 +1,92 @@
+// Variables
+$primary-color: #f9f8f8;
+$text-color: #000000;
+$hover-bg: #555;
+$breakpoint-md: 600px;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.btn{
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 0;
+    background-color: #e17100;
+    color: white;
+    cursor: pointer;
+
+    &:hover{
+        background-color: lighten($color: #e17100, $amount: 25);
+    }
+}
+
+// header
+.topnav {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: $primary-color;
+
+  a {
+    display: none; // Mobile default
+    color: $text-color;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    &:first-child {
+      display: inline-block; // Show first link on mobile
+    }
+
+    &:hover {
+      color: #e17100;
+    }
+  }
+
+  .icon {
+    float: right;
+    display: block; // Show hamburger on mobile
+  }
+
+  &.responsive {
+    position: relative;
+
+    a {
+      display: block;
+      text-align: left;
+      float: none;
+    }
+
+    .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.active {
+  color: white;
+  font-weight: bolder;
+}
+
+// Desktop enhancement (mobile-first)
+@media screen and (min-width: $breakpoint-md) {
+  .topnav {
+    display: flex;
+    // justify-content: space-between;
+    a {
+      float: left;
+      display: block;
+      text-align: center;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+}

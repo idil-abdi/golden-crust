@@ -1,1 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+.btn {
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 0;
+  background-color: #e17100;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(255, 176.6, 97.5);
+}
+
+.topnav {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #f9f8f8;
+}
+.topnav a {
+  display: none;
+  color: #000000;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:first-child {
+  display: inline-block;
+}
+.topnav a:hover {
+  color: #e17100;
+}
+.topnav .icon {
+  float: right;
+  display: block;
+}
+.topnav.responsive {
+  position: relative;
+}
+.topnav.responsive a {
+  display: block;
+  text-align: left;
+  float: none;
+}
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.active {
+  color: white;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 600px) {
+  .topnav {
+    display: flex;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+  }
+  .topnav .icon {
+    display: none;
+  }
+}
