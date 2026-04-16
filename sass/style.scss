@@ -7,6 +7,12 @@ $breakpoint-md: 600px;
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #fffbeb ;
+}
+
+.active {
+  color: white;
+  font-weight: bolder;
 }
 
 .btn{
@@ -69,15 +75,54 @@ body {
   }
 }
 
-.active {
-  color: white;
-  font-weight: bolder;
+// hero section
+.hero__background{
+  min-height: 100vh;
+  background-image: url('../hero-img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero__content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.2;
+
+    h1{
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p{
+      font-size: 30px;
+    }
+
+    .hero__buttons{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 10px;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
 }
 
 // Desktop enhancement (mobile-first)
 @media screen and (min-width: $breakpoint-md) {
+  .btn{
+    width: 100px;
+  }
+  
   .topnav {
     display: flex;
+    align-items: center;
     // justify-content: space-between;
     a {
       float: left;

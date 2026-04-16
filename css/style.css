@@ -1,6 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #fffbeb;
+}
+
+.active {
+  color: white;
+  font-weight: bolder;
 }
 
 .btn {
@@ -54,14 +60,46 @@ body {
   top: 0;
 }
 
-.active {
+.hero__background {
+  min-height: 100vh;
+  background-image: url("../hero-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__background .hero__content {
   color: white;
-  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.2;
+}
+.hero__background .hero__content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.hero__background .hero__content p {
+  font-size: 30px;
+}
+.hero__background .hero__content .hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @media screen and (min-width: 600px) {
+  .btn {
+    width: 100px;
+  }
   .topnav {
     display: flex;
+    align-items: center;
   }
   .topnav a {
     float: left;
