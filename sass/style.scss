@@ -1,4 +1,4 @@
-$primary-color: #f9f8f8;
+$primary-color: #fffbeb;
 $text-color: #000000;
 $hover-bg: #555;
 $breakpoint-md: 600px;
@@ -6,7 +6,7 @@ $breakpoint-md: 600px;
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fffbeb ;
+  background-color: $primary-color ;
 }
 
 .active {
@@ -33,7 +33,7 @@ body {
   position: sticky;
   top: 0;
   overflow: hidden;
-  background-color: $primary-color;
+  // background-color: #$primary-color;
 
   a {
     display: none; // Mobile default
@@ -76,7 +76,7 @@ body {
 
 // hero section
 .hero__background{
-  min-height: 100vh;
+  min-height: 75vh;
   background-image: url('../img/hero-img.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,8 +84,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
   .hero__content{
+    margin: 10px 0;
     color: white;
     display: flex;
     flex-direction: column;
@@ -124,7 +126,6 @@ body {
     display: flex;
     flex-direction: column;
     .feature-card{
-      border: 1px solid black;
       margin-bottom: 10px;
       padding: 10px;
       &__img{
@@ -137,14 +138,49 @@ body {
   }
 }
 
+.about{
+  .feature-card{
+    background-color: #f9f8f8;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    &__heading{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
+
 .products{
+  .feature-card__img:hover {
+    img{
+      transform: scale(1.2);
+    }
+  }
   .features{
   .feature-card{
-    &__img{
-      img{border-radius: 10%;}
-    }
     border: none;
-    // background-color: #fff;
+    &__img{
+      overflow: hidden;
+        border-radius: 10%;
+
+      img{
+        border-radius: 10%;
+        transition: transform 0.2s ease-out;
+      }
+    }
+    .product-card{
+      &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .product-card__price{
+          color: #e17100;
+        }
+    }
+  }
   }}
 }
 
@@ -198,7 +234,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 15px 0;
-
+    text-align: center;
     .footer__brand{
       font-weight: 900;
       color: #e17100;
