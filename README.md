@@ -19,5 +19,7 @@ The project focuses on clean design, structured layout, and modern styling techn
 - **HTML5** – Content structure
 - **Sass (SCSS)** – Modular styling
 - **CSS3** – Compiled from Sass
-
+  
 ---
+
+Project View: [Golden crust](https://idil-abdi.github.io/golden-crust/)
