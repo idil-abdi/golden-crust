@@ -22,4 +22,4 @@ The project focuses on clean design, structured layout, and modern styling techn
   
 ---
 
-Project View: [Golden crust](https://idil-abdi.github.io/golden-crust/)
+Project View: [Golden Crust](https://idil-abdi.github.io/golden-crust/)
